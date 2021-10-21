@@ -1,0 +1,1 @@
+SECRET_KEY = 'Change_this_string!'

@@ -1,0 +1,26 @@
+{% extends 'base.html' %}
+{% block title %}Home{% endblock %}
+{% block content %}
+
+<center>
+    <img class="btc-logo" src="https://upload.wikimedia.org/wikipedia/commons/thumb/4/46/Bitcoin.svg/1200px-Bitcoin.svg.png" height="100px" width="100px" >
+    <h1>Wallet Generator</h1>
+    <br>
+    <p>Backend Bitcoin Brain Wallet Generator Made With Flask</p>
+    <br><br>
+    <br><br>
+    <br><br>
+    <br><br>
+    <br><br>
+    <form method="post">
+        <input class="input-field" type="text" name="salt" id="salt" size="60">
+        <p id="guide">Enter Random Characters For Key Generation</p>
+        <br>
+        <br>
+        <br>
+        <input class="button green loading-button" type="submit" value="Generate">
+    </form>
+    
+</center>
+<script src="{{url_for('static', filename='logic.js')}}"></script>
+{% endblock %}

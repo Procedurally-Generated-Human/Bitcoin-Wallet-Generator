@@ -1,0 +1,20 @@
+{% extends 'base.html' %}
+{% block title %}Home{% endblock %}
+
+{% block content %}
+<center>
+<div class="wallet-p">
+    <p><b>Address:</b> {{ address }}</p>
+    <img src='{{ qrcode(address, box_size=8, border=2) }}'>
+    </br>
+    <p><b>Private Key:</b> {{ private_key }}</p>
+    <img src='{{ qrcode(private_key, box_size=8, border=2) }}'>
+</div><br><br>
+<button class="button green loading-button print" id="print" onclick="print_page();">Print</button>
+</center>
+<script>
+    function print_page(){
+    window.print();
+}; 
+</script>
+{% endblock %}
